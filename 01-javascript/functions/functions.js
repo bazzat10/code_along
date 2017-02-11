@@ -1,4 +1,4 @@
-console.log('JAVASCRIPT working for functions');
+fda foconsole.log('JAVASCRIPT working for functions');
 
 var numberWeTellTheWorld = 500000; // outside varialble - can call on the console.
 
@@ -36,10 +36,31 @@ var calculateAge = function(birthYear, currentYear){
  console.log('Your Age is:' + age);
 };
 
-var lengths = function(string){
-  var string_length = string.length; // returns lengths of the string argument pass my the function
-  return string_length;
-};
+calculateAge(2017, 1800);
+calculateAge(1981, 2017);
+calculateAge(1983, 2017);
+
+
+
+//var lengths = function(string){
+//  var string_length = string.length; // returns lengths of the string argument pass my the function
+//  return string_length;
+  // console.log(string_length)
+  //
+//};
+
+var input = ['cake', 'pudding'];
+// output = [4,7];
+
+//far lenghts = fucntion lengths(input) {
+ //var myArray = [];
+ //for (var i = 0; )
+//};
+
+
+
+
+
 
 var transmogrifier = function(numb1, numb2, numb3){
   var num1_numb2 = numb1 * numb2;
@@ -57,9 +78,14 @@ var wordReverse = function(string){
  for(var i=0; i<=string.length; i++){
   reversedString += string.charAt(stringLength);
   stringLength --;
-  };
-
-  return reversedString;
-  // functions accepts an string argument and returns it as reversed
-
 };
+
+  return reversedString; */
+
+var wordReverse = function(str) {
+  var splitted = str.split('');
+  return splitted.reverse().join('');
+};
+
+
+  // functions accepts an string argument and returns it as reversed
