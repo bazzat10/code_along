@@ -16,6 +16,8 @@ var classroomSize = students.length;
 var numberOfGroups = Math.floor(classroomSize / numberOfPeopleInGroup); // calculates how many groups there will be
 var remainder = classroomSize % numberOfPeopleInGroup; // calculates remaining people not in a group
 var remainderCounter = classroomSize - remainder;
+var ifRemainderLargerThanNumberOfGroups = remainder - numberOfGroups;
+
 //var objectArray = [{
 
 //}];
@@ -23,8 +25,8 @@ var remainderCounter = classroomSize - remainder;
 var groupCounter = 0;
 var peopleCounter = 0;
 //var testObject ={};
-var array1 =[[]];
-var counter = 0;
+var array1 = [];
+var counter = 0; // index counter for students array
 var student = [];
 //var testindex = 1;
 //var groups = [['gat', 'hermi', 'kevin', 'barry'],['mark','sandesh','soul','julian']];
@@ -33,8 +35,10 @@ var student = [];
 var classSplitIntoGroups = function(numberOfPeopleInGroup, numberOfGroups){
   for (groupCounter = 0; groupCounter < numberOfGroups; groupCounter++){ // loops for the number of groups
     for (peopleCounter = 0; peopleCounter < numberOfPeopleInGroup;  peopleCounter++){ // while in loop in group loop - it will loop and add students one by one to that group
-      student.push(students[counter]); // keeps adding to the student array
-      array1[groupCounter] = student; // adds student array to array1 = arary within an array
+      student.push(students[counter]); // keeps student adding to the student array
+      array1[groupCounter] = student; // student array keeps overwriting as it keeps being assigned to array1
+    //  console.log(student);
+    //  console.log(array1);
     //objectArray.group += student;
     //console.log(counter); // test console log
       counter ++; // students index counter
@@ -46,25 +50,31 @@ var classSplitIntoGroups = function(numberOfPeopleInGroup, numberOfGroups){
 //console.log('group counter' + groupCounter);
 
   if(remainder !== 0){
-    for (groupCounter = 0; groupCounter < remainder; groupCounter++){
-      array1[groupCounter][numberOfPeopleInGroup] = students[remainderCounter]; // adds the number of people in a group plus counter // adding remaining people to a group
-    //student.push(students[remainderCounter]);
-    //array1[groupCounter] = student;
-      remainderCounter++;
+    if(ifRemainderLargerThanNumberOfGroups > numberOfGroups){
+      alert('Remaining People is larger than the amount of groups - please choose a smaller amout of people per group');
+    } else {
+      for (groupCounter = 0; groupCounter < remainder; groupCounter++){
+        array1[groupCounter].push(students[remainderCounter]); // add remaining people to group by using push funciton.
+        //student.push(students[remainderCounter]);
+        //array1[groupCounter] = student;
+        remainderCounter++;
 
-      console.log('sum of number of people and group counter:'+ (numberOfPeopleInGroup + groupCounter));
-      console.log('number of peple in a group:'+ numberOfPeopleInGroup);
-      console.log('group counter:' + groupCounter);
-    //student = [];
+        //console.log('sum of number of people and group counter:'+ (numberOfPeopleInGroup + groupCounter));
+        //console.log('number of peple in a group:'+ numberOfPeopleInGroup);
+        //console.log('group counter:' + groupCounter);
+        //student = [];
+      };
+
     };
-  };
 
+  };
 //console.log('number of peopleInGroupCount' + numberOfPeopleInGroup);
 //console.log('group counter' + groupCounter);
-
-  console.log(array1)
-  console.log(remainder + " left out of the group, they have been added to the existing groups");
+  //  console.log(ifRemainderLargerThanNumberOfGroups);
+    console.log(array1);
+    console.log(remainder + " left out of the group, they have been added to the existing groups");
 };
+
 
 classSplitIntoGroups(numberOfPeopleInGroup,numberOfGroups);
 /*while(counter < classroomSize){
