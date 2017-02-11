@@ -47,12 +47,14 @@ var classSplitIntoGroups = function(numberOfPeopleInGroup, numberOfGroups){
 
   if(remainder !== 0){
     for (groupCounter = 0; groupCounter < remainder; groupCounter++){
-      array1[groupCounter][numberOfPeopleInGroup + groupCounter] = students[remainderCounter]; // adds the number of people in a group plus counter // adding remaining people to a group
+      array1[groupCounter][numberOfPeopleInGroup] = students[remainderCounter]; // adds the number of people in a group plus counter // adding remaining people to a group
     //student.push(students[remainderCounter]);
     //array1[groupCounter] = student;
       remainderCounter++;
 
-
+      console.log('sum of number of people and group counter:'+ (numberOfPeopleInGroup + groupCounter));
+      console.log('number of peple in a group:'+ numberOfPeopleInGroup);
+      console.log('group counter:' + groupCounter);
     //student = [];
     };
   };
