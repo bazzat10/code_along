@@ -51,7 +51,8 @@ var classSplitIntoGroups = function(numberOfPeopleInGroup, numberOfGroups){
 
   if(remainder !== 0){
     if(ifRemainderLargerThanNumberOfGroups > numberOfGroups){
-      alert('Remaining People is larger than the amount of groups - please choose a smaller amout of people per group');
+      alert('Too many people excluded out of the group - please choose a smaller NUMBER of people per group');
+
     } else {
       for (groupCounter = 0; groupCounter < remainder; groupCounter++){
         array1[groupCounter].push(students[remainderCounter]); // add remaining people to group by using push funciton.
@@ -63,6 +64,8 @@ var classSplitIntoGroups = function(numberOfPeopleInGroup, numberOfGroups){
         //console.log('number of peple in a group:'+ numberOfPeopleInGroup);
         //console.log('group counter:' + groupCounter);
         //student = [];
+
+        console.log(remainder + " left out of the group, they have been added to the existing groups");
       };
 
     };
@@ -72,7 +75,7 @@ var classSplitIntoGroups = function(numberOfPeopleInGroup, numberOfGroups){
 //console.log('group counter' + groupCounter);
   //  console.log(ifRemainderLargerThanNumberOfGroups);
     console.log(array1);
-    console.log(remainder + " left out of the group, they have been added to the existing groups");
+
 };
 
 
