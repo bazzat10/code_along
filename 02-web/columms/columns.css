@@ -1,0 +1,39 @@
+element.style {
+}
+
+/*div {
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid;
+  background-color: plum;
+}
+
+div{
+  background-color: pink;
+}
+
+.info {
+  box-sizing: border-box;
+  color: blue;
+  height: 120px;
+}
+
+#special {
+
+}
+
+* {
+  box-sizing: border-box;
+  display: inline-block;;
+}*/
+
+.wrapper div {
+  width: 50%;
+  display: inline-block;
+  border:1px solid red;
+};
+
+.float-wrapper div{
+  float:left;
+  wid: 50%;
+};

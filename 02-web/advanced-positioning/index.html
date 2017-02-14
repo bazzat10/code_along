@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  <style>
+    #special{
+      background-color: plum: /*this will overwrite and external style sheet*/
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li>home</li>
+      <li>about</li>
+      <li>donate</li>
+    </ul>
+  </nav>
+
+  <div id="special">
+    i am special
+  </div>
+
+  <div id="less-special">
+    i am also sort of special
+  </div>
+
+  <div class="box position-static">static</div>
+  <div class="box position-fixed">fixed</div>
+  <div class="box position-relative">relative
+      <div class="box position-absolute">absolute within relative</div>
+  </div>
+  <div class="box position-absolute">absolute</div>
+
+
+
+</body>
+</html>
