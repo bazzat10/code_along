@@ -1,0 +1,62 @@
+
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.span-1,
+.span-2,
+.span-3 {
+  min-height: 100px;
+  float: left;
+  width: 96:66666%
+  margin-right: 3.33333%/*20px;*/
+}
+
+
+
+
+.span-1 {
+  background-color: mistyrose;
+/*  width: 30%; /*180/600 =0.3*/
+}
+
+.span-2 {
+  background-color: linen;
+  width: 63.33333%;
+}
+
+.span-3 {
+  min-height: 100px
+  background-color: plum;
+  width: 96.66666%
+}
+
+.link{
+/*  display:inline-block;*/
+/*  border: solid black;*/
+}
+
+img {
+  max-width: 100%;
+}
+
+@media(min-width: 300px){
+    body{
+      width: 80%;
+    }
+
+   .span-2 {
+    width: 63.333333%;
+  }
+
+  .span-1{
+    width: 30%;
+  }
+
+  .link{
+    display:inline-block;;
+  /* border: solid black;*/
+  }
+}

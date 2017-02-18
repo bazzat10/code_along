@@ -36,12 +36,13 @@ var marioWalk= function(){
   var currentLeft = parseInt(img.style.left);
 //  console.log(currentLeft);
   img.style.left = currentLeft + movePixel + 'px';
-  if(currentLeft > 700){//window.innerWidth){
+  if(currentLeft > (window.innerWidth - img.width)){
     //img.style.left = '0px';
     stop();
   //  img.style.rotate(180deg);
   //  img.style.transform = scaleX(-1);
     img.style.transform = "scaleX(-1)";
+  //  /Users/Barry/wdi11/code_alongs/02-web/toiletjs/sonic.gif
     walkBack();
     //img.style.left = window.innerWidth;
   };
@@ -50,11 +51,13 @@ var marioWalk= function(){
 
 
 var go = function() {
+  stop();
   stopGifGo = setInterval(marioWalk, 300);
   console.log(stopGifGo);
 };
 
 var faster = function(){
+  stop();
   stopGifFaster = setInterval(marioWalk, 30);
   console.log(stopGifFaster);
 };
@@ -75,6 +78,8 @@ var marioWalkBack = function(){
       //img.style.left = '0px';img.style.transform = "scaleX(-1)""
       stop();
       img.style.transform = "scaleX(+1)";
+      img.currentSrc = document.getElementById('image').src='sonic.gif';
+      console.log('test when walk back');
       faster();
       //img.style.left = window.innerWidth;
     };
