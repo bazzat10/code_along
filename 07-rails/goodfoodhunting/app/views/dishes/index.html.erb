@@ -1,0 +1,27 @@
+<h1>Dishes Home Page</h1>
+
+<% @dishes.each do |dish| %>
+  <div class='dish-page'>
+    <div class='top'>
+      <div class='top-left'>logo</div>
+      <div class='top-middle'>image</div>
+      <div class='top-right'>timestamp</div>
+    </div>
+    <div class="dish-image">
+      <img src="<%=dish.image_url%>">
+    </div>
+    <div class ='dish-info'>
+      <a href="/dishes/<%=dish.id%>"><%=dish.name%></a>
+    </div>
+    <div class ='bottom'>
+      <form action="/dishes" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="dish_id" value="<%= dish.id %>">
+        <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+        <button>delete</button>
+      </form>
+      <button class="like-btn">LIKE</button>
+      <div class='like-counter'>Counter</div>
+    </div>
+  </div>
+<% end %>

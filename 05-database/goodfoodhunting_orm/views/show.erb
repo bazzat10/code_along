@@ -1,0 +1,27 @@
+<h1><%= @dish.name %></h1>
+
+<form action="/dishes/<%= @dish.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>delete</button>
+</form>
+
+<% if loggin_in? %>
+
+  <a href="/dishes/<%= @dish.id %>/edit">edit</a>
+
+<% end %>
+
+<% @comments.each do |comment|%>
+  <p><%= comment.body %></p>
+  <p><%= comment.dish_id %></p>
+  <!-- <p><%= comment.dish_id %></p> -->
+  <hr>
+<% end %>
+
+<form action="/comments" method="post">
+  <input type="hidden" name="dish_id" value="<%= @dish.id %>">
+  <input type="hidden" name="user_id" value="<%= @dish.id %>">
+  <textarea name="body"></textarea>
+  <button>post</button>
+</form>
+Contact GitHub API Training Shop Blog About
