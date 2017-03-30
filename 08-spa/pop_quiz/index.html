@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <script> // script runs twice for declaration. // HOISTING
+      console.log(wally);
+
+      var wally = 'is here';
+
+      doSometing();
+
+      // function declaration
+      function doSomething() {
+
+        console.log(magic);
+
+        var magic = 'real';
+
+        console.log('adfkjljadsf');
+
+        doSomeMath();
+
+        function doSomeMath(){
+
+        };
+      };
+
+      // function expression
+      var  doSomething = function () { //var  doSomethingElse = function doSomething()
+
+      };
+
+
+    </script>
+</body>
+</html>

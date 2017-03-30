@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>GitHub API</h1>
+  <div class="output"></div>
+  <script>
+  $.ajax({
+    url: 'https://api.github.com/users/bazzat10',
+    method: 'get',
+    dataType: 'JSON'
+  }).done(createData);
+
+  function createData(data) {
+    $('<p>').text(data).appendTo('.output');
+    Object.keys(data).forEach(function(key){ // forEach function has no index. it will interate through the array.
+      $('<p>').text(key + ": " + data[key]).appendTo('.output');
+    });
+
+    console.log(data);
+  };
+
+  createData();
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

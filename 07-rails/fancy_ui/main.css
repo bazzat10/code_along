@@ -1,0 +1,147 @@
+header {
+  line-height: 2em;
+}
+
+.right {
+  float: right;
+}
+
+.content {
+  padding: .8em;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+
+html {
+  box-sizing: border-box;
+
+}
+
+*, *:border, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure,
+ol,
+ul, {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit;
+}
+
+a,
+button {
+  color: inherit;
+  transition: .3s; /*transition delay */
+
+}
+
+a:hover {
+  color: red;
+  font-size: 2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+.dish-page {
+  border: solid;
+  width: 800px;
+  length: 800px;
+}
+
+.top {
+  width: 100%;
+  border: solid;
+  overflow: hidden;
+}
+
+.top-left {
+  float: left;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: solid;
+}
+
+.top-middle {
+  margin: 0 auto;
+  width: 100px;
+}
+
+.top-right {
+  float: right;
+  width: 100px;
+}
+
+.dish-image {
+  text-align: center;
+}
+
+.dish-info {
+  text-align: left;
+}
+
+.bottom {
+  border: solid;
+  overflow: hidden;
+}
+
+.like-counter,
+.like-btn {
+  float: right;
+}
+
+
+
+.ui-card {
+  float: left;
+  width: 25%;
+  margin: 1%;
+  background-color: mistyrose;
+}
+
+.image {
+  position: relative;
+}
+.star {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  -webkit-user-select: none;
+}

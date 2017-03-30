@@ -17,8 +17,10 @@ Rails.application.routes.draw do
 
   delete '/dishes', to: 'dishes#destroy'
 
-  get '/dishes/:id', to: 'dishes#show'
+  get '/dishes/:id', to: 'dishes#show' # users request - to controller and method
 
+  post '/api/likes', to: 'likes#api_create'
+  get '/api/dishes', to: 'api/dishes#index'
 
   root 'dishes#index' # can be get' '/', to: 'dishes#index'
 end

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>code along ... BAD parts of JAVASCRIPT </h1>
+  <script>
+
+    console.log('JS working ...')
+
+
+    function doSomething() {
+      console.log(this); // brings back windows object
+    };
+
+    doSomething();
+
+    var person = {
+      name: 'cake',
+      sayHello: function() {
+        console.log(this.name + 'says hello');
+        // console.log('hello');
+        // console.log(this);
+        //return 'alkdjlakjf' // will return undefined if not stated
+      }
+    };
+
+
+    var dude = {
+      name: 'pudding'
+    };
+
+    // call site
+
+    var greetings = person.sayHello;
+
+    // $('body').on('click', function(event){
+    //   this === event.target
+    //
+    // });
+
+    function each(arr,func){
+      for(var i=0; i<arr.length; i++) {
+        func(arr[i]);
+      };
+    };
+
+
+    var list = ['a','b','c'];
+
+    each(list,function(elem){
+      console.log(elem);
+    });
+
+    // based on the call site (how the function is being called)
+    // default binding
+
+    func();
+
+    //imply binding
+
+    obj.func();
+
+    // explicit binding
+
+    func.call(obj);
+    foo.func.call(obj);
+    doSomething.apply(obj);
+
+    // hard binding permanently set the context of a function
+
+    var newFunc = func.bind(obj) // ==> returns another function for you to call
+    newFunc();
+
+    // puff magic
+    // function constructor
+
+
+  </script>
+
+</body>
+</html>

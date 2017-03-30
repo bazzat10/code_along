@@ -12,13 +12,13 @@ class DishesController <  ApplicationController
   end
 
   def create
-    dish = Dish.new
+    dish = Dish.new # gets from database
     dish.name = params[:name]
     dish.image_url = params[:image_url]
     if dish.save
       redirect_to '/dishes'
     else
-      render :new
+      render :new # calls the approriate view
     end
   end
 
