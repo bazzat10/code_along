@@ -1,5 +1,3 @@
-require 'pry'
-
 class Api::CardsController < ApplicationController
 
   def index
@@ -42,7 +40,7 @@ class Api::CardsController < ApplicationController
     else
       render json: card.errors
     end
-      
+
   end
 
 end
