@@ -1,0 +1,14 @@
+//module pattern
+
+var fullslack = function lib() {
+  var VERSION = '1.0';
+  var fullslack = {}
+
+  fullslack.getVersion = function () {
+    return VERSION;
+  };
+
+  return fullslack;
+};
+
+//var fullslack = lib();
